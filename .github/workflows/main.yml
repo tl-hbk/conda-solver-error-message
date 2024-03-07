@@ -1,0 +1,23 @@
+name: Broken Solve
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniconda-version: "latest"
+          auto-activate-base: true
+          activate-environment: ""
+      - shell: bash
+        run: conda info
+      - shell: bash
+        run: conda config --show-sources
+      - shell: bash
+        run: conda list --show-channel-urls
+      - shell: bash
+        run: conda env create --name broken --file dependencies.yml --dry-run
