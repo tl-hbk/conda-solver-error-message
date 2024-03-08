@@ -20,7 +20,7 @@ jobs:
       - shell: bash
         run: conda list --show-channel-urls
       - shell: bash
-        run: conda install libsolv=0.7.22 -c conda-forge --yes
+        run: conda install libsolv=0.7.22 libmamba=1.5.2 -c conda-forge --yes
       - shell: bash
         run: conda env create --name ok --file ok.yml --dry-run
       - shell: bash
