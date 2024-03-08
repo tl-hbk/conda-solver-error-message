@@ -22,4 +22,4 @@ jobs:
       - shell: bash
         run: conda env create --name ok --file ok.yml --dry-run
       - shell: bash
-        run: conda env create --name broken --file broken.yml --dry-run
+        run: conda env create --name broken --file broken.yml --dry-run -vvv
