@@ -8,8 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: conda-incubator/setup-miniconda@v3
         with:
+          miniconda-version: "Miniconda3-py38_23.11.0-2-Linux-x86_64.sh"
           auto-activate-base: true
           activate-environment: "true"
           python-version: "3.8"
