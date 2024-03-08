@@ -10,9 +10,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: conda-incubator/setup-miniconda@v2
         with:
-          miniconda-version: "latest"
+          miniconda-version: "23.11.0-1"
           auto-activate-base: true
           activate-environment: ""
+          python-version: "3.8"
       - shell: bash
         run: conda info
       - shell: bash
@@ -20,7 +21,7 @@ jobs:
       - shell: bash
         run: conda list --show-channel-urls
       - shell: bash
-        run: conda install python=3.8 libsolv=0.7.22 libmambapy=1.5.2 -c conda-forge --yes
+        run: conda install libsolv=0.7.22 libmambapy=1.5.2 -c conda-forge --yes
       - shell: bash
         run: conda env create --name ok --file ok.yml --dry-run
       - shell: bash
