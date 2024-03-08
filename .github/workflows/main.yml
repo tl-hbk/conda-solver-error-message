@@ -12,7 +12,7 @@ jobs:
         with:
           miniconda-version: "23.11.0-1"
           auto-activate-base: true
-          activate-environment: ""
+          activate-environment: "true"
           python-version: "3.8"
       - shell: bash
         run: conda info
