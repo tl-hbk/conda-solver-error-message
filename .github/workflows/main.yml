@@ -20,6 +20,8 @@ jobs:
       - shell: bash
         run: conda list --show-channel-urls
       - shell: bash
+        run: conda install libsolv=0.7.23 --yes
+      - shell: bash
         run: conda env create --name ok --file ok.yml --dry-run
       - shell: bash
         run: conda env create --name broken --file broken.yml --dry-run -vvv
